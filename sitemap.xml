@@ -2,38 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://singulaire.github.io/categories/blogging/</loc>
-    <lastmod>2022-03-09T12:14:05+11:00</lastmod>
+    <loc>https://singulaire.github.io/top/about/</loc>
   </url><url>
     <loc>https://singulaire.github.io/categories/</loc>
-    <lastmod>2022-03-09T12:14:05+11:00</lastmod>
-  </url><url>
-    <loc>https://singulaire.github.io/tags/hugo/</loc>
-    <lastmod>2022-03-09T12:14:05+11:00</lastmod>
-  </url><url>
-    <loc>https://singulaire.github.io/post/my-first-post/</loc>
-    <lastmod>2022-03-09T12:14:05+11:00</lastmod>
-  </url><url>
-    <loc>https://singulaire.github.io/post/</loc>
-    <lastmod>2022-03-09T12:14:05+11:00</lastmod>
-  </url><url>
-    <loc>https://singulaire.github.io/tags/</loc>
-    <lastmod>2022-03-09T12:14:05+11:00</lastmod>
-  </url><url>
-    <loc>https://singulaire.github.io/tags/testing/</loc>
-    <lastmod>2022-03-09T12:14:05+11:00</lastmod>
-  </url><url>
-    <loc>https://singulaire.github.io/</loc>
-    <lastmod>2022-03-09T12:14:05+11:00</lastmod>
-  </url><url>
-    <loc>https://singulaire.github.io/post/testpost/</loc>
-    <lastmod>2020-08-27T13:43:09-06:00</lastmod>
-  </url><url>
-    <loc>https://singulaire.github.io/top/about/</loc>
   </url><url>
     <loc>https://singulaire.github.io/tags/design-of-experiments/</loc>
   </url><url>
     <loc>https://singulaire.github.io/tags/mutual-information/</loc>
+  </url><url>
+    <loc>https://singulaire.github.io/post/</loc>
+  </url><url>
+    <loc>https://singulaire.github.io/tags/</loc>
+  </url><url>
+    <loc>https://singulaire.github.io/</loc>
   </url><url>
     <loc>https://singulaire.github.io/top/</loc>
   </url><url>

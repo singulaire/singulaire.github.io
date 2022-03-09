@@ -106,7 +106,32 @@ this lets us rewrite the bounds as follows, where we omit the dependency of $a, 
 $$\mathcal{L}(L, \pi) = \log  \frac{(L+1) a}{a+c} \quad\quad \mathcal{U}(L, \pi) =  \log \frac{L \cdot a}{c}$$
 Now suppose there exist policies $\pi_1$ and $\pi_2$ s.t.
 $$a(\pi_2) = b \cdot a(\pi_1) \quad\quad c(L, \pi_2) = d \cdot c(L, \pi_1)$$
-for some constant scalars $b, d$</p>
+for some constant scalars $b, d$. For convenience, we will denote $a_i = a(\pi_i); c_i = c(L, \pi_i)$. The differences between the bounds for the two policies are:
+$$\mathcal{U}_2 - \mathcal{U}_1 = \log \frac{L \cdot ba_1}{dc_1} - \log \frac{L \cdot a_1}{c_1} = \log \frac{Lba_1}{dc_1} \frac{c_1}{La_1} = \log \frac{b}{d}$$
+$$\mathcal{L}_2 - \mathcal{L}_1 = \log \frac{(L+1)ba_1}{ba_1 + dc_1} - \log \frac{(L+1)a_1}{a_1 + c_1} =
+\log \frac{(L+1)ba_1}{ba_1 + dc_1} \frac{a_1 + c_1}{(L+1)a_1} = \log\frac{b (a_1 + c_1)}{ba_1 + dc_1}$$
+Now note that we can rewrite the expression for $\mathcal{U}_1$ to get an expression for $a_1$ in terms of the upper bound:
+$$\mathcal{U}_1 = \log \frac{La_1}{c_1}$$
+$$e^{\mathcal{U}_1} = \frac{La_1}{c_1}$$
+$$a_1 = \frac{c_1 e^{\mathcal{U}_1}}{L}$$</p>
+<p>plugging this back into the difference between lower bounds gives us:
+$$\mathcal{L}_2 - \mathcal{L}_1 = \log\frac{b (\frac{1}{L} c_1 e^{\mathcal{U}_1} + c_1)}{b\frac{1}{L}c_1 e^{\mathcal{U}_1} + dc_1} =
+\log \frac{bc_1 (\frac{1}{L}e^{\mathcal{U}_1} + 1)}{c_1(\frac{1}{L}be^{\mathcal{U}_1} + d)} =
+\log \frac{ \frac{1}{L}be^{\mathcal{U}_1} + b}{\frac{1}{L}be^{\mathcal{U}_1} + d}$$</p>
+<p>Now we subtract $\log \frac{d}{d} = 0$ to both sides of the equation:</p>
+<p>$$\mathcal{L}_2 - \mathcal{L}_1 - 0 = \log \frac{\frac{1}{L}be^{\mathcal{U}_1} + b}{\frac{1}{L}be^{\mathcal{U}_1} + d} - \log \frac{d}{d}$$
+$$\mathcal{L}_2 - \mathcal{L}_1 = \log \frac{\frac{1}{L}be^{\mathcal{U}_1} + b}{\frac{1}{L}be^{\mathcal{U}_1} + d} \frac{\frac{1}{d}}{\frac{1}{d}}$$
+$$\mathcal{L}_2 - \mathcal{L}_1 = \log \frac{ \frac{1}{L}\frac{b}{d} e^{\mathcal{U}_1} + \frac{b}{d} }{ \frac{1}{L}\frac{b}{d} e^{\mathcal{U}_1} + \frac{d}{d} }$$</p>
+<p>Looking at the difference between upper bounds, we have that $\frac{b}{d} = e^{\mathcal{U}_2 - \mathcal{U}_1}$, therefore</p>
+<p>$$\mathcal{L}_2 - \mathcal{L}_1 = \log \frac{ \frac{1}{L} e^{\mathcal{U}_2 - \mathcal{U}_1} e^{\mathcal{U}_1} + e^{\mathcal{U}_2 - \mathcal{U}_1} }{ \frac{1}{L} e^{\mathcal{U}_2 - \mathcal{U}_1} e^{\mathcal{U}_1} + 1 }$$
+$$\mathcal{L}_2 - \mathcal{L}_1 = \log \frac{ \frac{1}{L} e^{\mathcal{U}_2} + e^{\mathcal{U}_2 - \mathcal{U}_1} }{ \frac{1}{L} e^{\mathcal{U}_2} + 1 }$$
+Which gives us an expression for the difference $\mathcal{L}_2 - \mathcal{L}_1$ purely in terms of the corresponding upper bounds.</p>
+<p>Now, we note that if $\mathcal{U}_2 &gt; \mathcal{U}_1$, then $e^{\mathcal{U}_2 - \mathcal{U}_1} &gt; 1$ and therefore</p>
+<p>$$\mathcal{L}_2 - \mathcal{L}_1 = \log \frac{ \frac{1}{L} e^{\mathcal{U}_2} + e^{\mathcal{U}_2 - \mathcal{U}_1} }{ \frac{1}{L} e^{\mathcal{U}_2} + 1 } &gt; 0$$
+which implies that $\mathcal{L}_2 &gt; \mathcal{L}_1$. The procedure can be reversed to show that $\mathcal{L}_2 &gt; \mathcal{L}_1 \implies \mathcal{U}_2 &gt; \mathcal{U}_1$, thus proving the first claim of the theorem.</p>
+<p>Similarly, we can note that if $\mathcal{U}_2 = \mathcal{U}_1$ then $e^{\mathcal{U}_2 - \mathcal{U}_1} = 1$, which by the same procedure as before shows that $\mathcal{U}_2 = \mathcal{U}_1 \implies \mathcal{L}_2 = \mathcal{L}_1$, and again we can reverse the procedure to show that $\mathcal{L}_2 = \mathcal{L}_1 \implies \mathcal{U}_2 = \mathcal{U}_1$, thus proving the second claim of the theorem</p>
+<p>Q.E.D.</p>
+<p>So what does this all mean? In theory, we can maximise the sNMC upper bound, and this indirectly maximise the sPCE lower bound, which we hope will drive up the actual mutual information. In fact, the two optimisations are in some sense equivalent, as increasing either bound must increase the other by a predictable, deterministic amount. In practice, my experience is that both approaches perform equally well.</p>
 <p>References:</p>
 <p>Foster, A., Ivanova, D. R., Malik, I., &amp; Rainforth, T. &ldquo;Deep adaptive design: Amortizing sequential bayesian experimental design.&rdquo; International Conference on Machine Learning. PMLR, 2021.</p>
 
