@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tops - Tom Blau - But It Could Be Better</title>
+	<title>design of experiments - Tom Blau - But It Could Be Better</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	
-	<link rel="alternate" type="application/rss+xml" href="/top/index.xml" title="Tom Blau - But It Could Be Better">
+	<link rel="alternate" type="application/rss+xml" href="/tags/design-of-experiments/index.xml" title="Tom Blau - But It Could Be Better">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -59,19 +59,21 @@
 			
 <main class="main list" role="main">
 	<header class="main__header">
-		<h1 class="main__title">Tops</h1>
+		<h1 class="main__title">design of experiments</h1>
 	</header><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/top/about/" rel="bookmark">
-			
+			<a href="/post/upper-and-lower-mutual-information-bounds/" rel="bookmark">
+			Upper and Lower Mutual Information Bounds
 			</a>
 		</h2>
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		I&rsquo;m a machine learning researcher interested in using reinforcement learning to do something more valuable than just generating papers. I completed my Ph.D. at the university of Sydney in 2020, completing a thesis on reinforcement learning for robotics. One of the most striking lessons from my Ph.D. was the gap between state-of-the-art RL and actual, real-world applications that provide benefit to flesh-and-blood humans. Since then I have been working on RL solutions for real problems, with a current focus on Bayesian optimal design of experiments.
+		Recently Foster et al (2020) introduced a couple of tractable bounds that can be used to estimate the expected information gain (EIG) of a design policy (a mapping from past designs and observations to the next design). These include the sequential Prior Contrastive Estimate (sPCE) lower bound:
+$$ \mathcal{L}_T(\pi) = \mathbb{E} \left[ \log \frac{p(h_T | \theta_0, \pi)}{\frac{1}{L+1} \sum_0^L p(h_T | \theta_l, \pi)} \right] $$
+where $h_T = (d_0, y_0,\dots,d_T,y_T)$ is the experimental history at time $T$, $\pi$ is the design policy, $L$ is the number of contrastiv samples and $\theta$ parameterises the experimental model $p(y|\theta, d)$ that maps designs to a distribution over outcomes.
 	</div>
 </article>
 </main>

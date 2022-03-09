@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>But It Could Be Better</title>
+    <title>Tom Blau - But It Could Be Better</title>
     <link>https://singulaire.github.io/</link>
-    <description>Recent content on But It Could Be Better</description>
+    <description>Recent content on Tom Blau - But It Could Be Better</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Mar 2022 12:14:05 +1100</lastBuildDate><atom:link href="https://singulaire.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -31,7 +31,18 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://singulaire.github.io/top/about/</guid>
-      <description>I&amp;rsquo;m a machine learning researcher interested in using reinforcement learning to do something more valuable than just generating papers. I completed my Ph.D. at the university of Sydney in 2020.</description>
+      <description>I&amp;rsquo;m a machine learning researcher interested in using reinforcement learning to do something more valuable than just generating papers. I completed my Ph.D. at the university of Sydney in 2020, completing a thesis on reinforcement learning for robotics. One of the most striking lessons from my Ph.D. was the gap between state-of-the-art RL and actual, real-world applications that provide benefit to flesh-and-blood humans. Since then I have been working on RL solutions for real problems, with a current focus on Bayesian optimal design of experiments.</description>
+    </item>
+    
+    <item>
+      <title>Upper and Lower Mutual Information Bounds</title>
+      <link>https://singulaire.github.io/post/upper-and-lower-mutual-information-bounds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://singulaire.github.io/post/upper-and-lower-mutual-information-bounds/</guid>
+      <description>Recently Foster et al (2020) introduced a couple of tractable bounds that can be used to estimate the expected information gain (EIG) of a design policy (a mapping from past designs and observations to the next design). These include the sequential Prior Contrastive Estimate (sPCE) lower bound:
+$$ \mathcal{L}_T(\pi) = \mathbb{E} \left[ \log \frac{p(h_T | \theta_0, \pi)}{\frac{1}{L+1} \sum_0^L p(h_T | \theta_l, \pi)} \right] $$
+where $h_T = (d_0, y_0,\dots,d_T,y_T)$ is the experimental history at time $T$, $\pi$ is the design policy, $L$ is the number of contrastiv samples and $\theta$ parameterises the experimental model $p(y|\theta, d)$ that maps designs to a distribution over outcomes.</description>
     </item>
     
   </channel>

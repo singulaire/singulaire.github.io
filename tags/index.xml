@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on But It Could Be Better</title>
+    <title>Tags on Tom Blau - But It Could Be Better</title>
     <link>https://singulaire.github.io/tags/</link>
-    <description>Recent content in Tags on But It Could Be Better</description>
+    <description>Recent content in Tags on Tom Blau - But It Could Be Better</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Mar 2022 12:14:05 +1100</lastBuildDate><atom:link href="https://singulaire.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -22,6 +22,24 @@
       <pubDate>Wed, 09 Mar 2022 12:14:05 +1100</pubDate>
       
       <guid>https://singulaire.github.io/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design of experiments</title>
+      <link>https://singulaire.github.io/tags/design-of-experiments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://singulaire.github.io/tags/design-of-experiments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mutual information</title>
+      <link>https://singulaire.github.io/tags/mutual-information/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://singulaire.github.io/tags/mutual-information/</guid>
       <description></description>
     </item>
     

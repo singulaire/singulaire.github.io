@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Upper and Lower Mutual Information Bounds - Tom Blau - But It Could Be Better</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="But It Could Be Better" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/factorio.jpg">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">But It Could Be Better</div>
+					<div class="logo__tagline">Ponderings on ML</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/top/about/">
+				
+				<span class="menu__text">about</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+	<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Upper and Lower Mutual Information Bounds</h1>
+			
+		</header>
+		<div class="content post__content clearfix">
+			<p>Recently Foster et al (2020) introduced a couple of tractable bounds that can be used to estimate the expected information gain (EIG) of a <em>design policy</em> (a mapping from past designs and observations to the next design). These include the <em>sequential Prior Contrastive Estimate</em> (sPCE) lower bound:</p>
+<p>$$
+\mathcal{L}_T(\pi) = \mathbb{E} \left[ \log \frac{p(h_T | \theta_0, \pi)}{\frac{1}{L+1} \sum_0^L p(h_T | \theta_l, \pi)} \right]
+$$</p>
+<p>where $h_T = (d_0, y_0,\dots,d_T,y_T)$ is the experimental history at time $T$, $\pi$ is the design policy, $L$ is the number of <em>contrastiv samples</em> and $\theta$ parameterises the experimental model $p(y|\theta, d)$ that maps designs to a distribution over outcomes. The expectation in the sPCE is w.r.t. the distributions $\theta_0, h_T \sim p(\theta) \prod_{t=1}^{T}p(y_t | \theta, \pi(h_{t-1})$ and $\theta_{1:L} \sim p(\theta)$ where $p(\theta)$ is some prior.</p>
+<p>We also have the corresponding <em>sequential Nested Monte Carlo</em> (sNMC) upper bound:</p>
+<p>$$
+\mathcal{U}_T(\pi) = \mathbb{E} \left[ \log \frac{p(h_T | \theta_0, \pi)}{\frac{1}{L} \sum_1^L p(h_T | \theta_l, \pi)} \right]
+$$</p>
+<p>where the only difference is that we don&rsquo;t include $l=0$ in the denominator. Since the objective is usually to maximise EIG, the intuitive approach would be to maximise the lower (and hope that it actually drives the EIG up, rather than just tightening the bound). However, as is typical for mutual information lower bounds, the sPCE is upper-bounded by $\text{sPCE} \le \log(L+1)$ which you can verify for yourself by noting that $p(h_T | \theta_0, \pi)$ appears in both the numerator and denominator, and remembering that probabilities are always non-negative. That means if the actual EIG is large, we would need an exponentially large $L$ to estimate it accurately.</p>
+<p>This might lead you to wonder if we could use the upper bound instead, which does not suffer the same limitation. Intuitively it doesn&rsquo;t make much sense to maximise a quantity by maximising an upper bound, because we might just be making the bound arbitrarily loose. But it turns out there is a monotonicity property connecting the sPCE and sNMC.</p>
+<p>Let $\pi_1, \pi_2$ be two design policies, and for simplicity we will write $\mathcal{L}_1, \mathcal{L}_2$ and $\mathcal{U}_1, \mathcal{U}_2$ to denote the lower and upper bounds of those policies as estimated with arbitrary $L$ and $T$.</p>
+<p><strong>Theorem 1</strong> <em>the sPCE lower bound and sNMC upper bound induce the same total order on policy space:</em>
+$$\mathcal{U}_2 &gt; \mathcal{U}_1  \iff \mathcal{L}_2 &gt; \mathcal{L}_1 \quad \forall \pi_1,\pi_2 \in \Pi$$
+$$\mathcal{U}_2 = \mathcal{U}_1  \iff \mathcal{L}_2 = \mathcal{L}_1 \quad \forall \pi_1,\pi_2 \in \Pi$$</p>
+<p><strong>Proof</strong> to simplify the following analysis, we introduce the notation:
+$$a(\pi) = p(h_T | \theta_0, \pi) \quad\quad c(L, \pi) = \sum_1^L p(h_T | \theta_l, \pi)$$
+this lets us rewrite the bounds as follows, where we omit the dependency of $a, c$ on $L$ and $\pi$ for brevity:
+$$\mathcal{L}(L, \pi) = \log  \frac{(L+1) a}{a+c} \quad\quad \mathcal{U}(L, \pi) =  \log \frac{L \cdot a}{c}$$
+Now suppose there exist policies $\pi_1$ and $\pi_2$ s.t.
+$$a(\pi_2) = b \cdot a(\pi_1) \quad\quad c(L, \pi_2) = d \cdot c(L, \pi_1)$$
+for some constant scalars $b, d$</p>
+<p>References:</p>
+<p>Foster, A., Ivanova, D. R., Malik, I., &amp; Rainforth, T. &ldquo;Deep adaptive design: Amortizing sequential bayesian experimental design.&rdquo; International Conference on Machine Learning. PMLR, 2021.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/mutual-information/" rel="tag">mutual information</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/design-of-experiments/" rel="tag">design of experiments</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2022 Tom Blau - But It Could Be Better.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
