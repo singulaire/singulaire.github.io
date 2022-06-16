@@ -7,6 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://singulaire.github.io/tags/design-of-experiments/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Bounds on Bounds</title>
+      <link>https://singulaire.github.io/post/bounds-on-bounds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://singulaire.github.io/post/bounds-on-bounds/</guid>
+      <description>This is a TODO that reminds me to eventually write a post on limitations of MI estimators and alternative solutions.</description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning for Design of Experiments</title>
+      <link>https://singulaire.github.io/post/rl-boed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://singulaire.github.io/post/rl-boed/</guid>
+      <description>This is a TODO that reminds me to eventually write a post on My recent paper and where we can go next.</description>
+    </item>
+    
+    <item>
       <title>Upper and Lower Mutual Information Bounds</title>
       <link>https://singulaire.github.io/post/upper-and-lower-mutual-information-bounds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

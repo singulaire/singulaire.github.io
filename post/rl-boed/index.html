@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title> - Tom Blau - But It Could Be Better</title>
+	<title>Reinforcement Learning for Design of Experiments - Tom Blau - But It Could Be Better</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +57,29 @@
 </nav>
 
 	</div>
-	
+	<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </header>
 
 		<div class="wrapper flex">
@@ -66,30 +88,27 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title"></h1>
+			<h1 class="post__title">Reinforcement Learning for Design of Experiments</h1>
 			
 		</header>
 		<div class="content post__content clearfix">
-			<h1 id="publications">Publications</h1>
-<p>Below follows a list of my publications:</p>
-<p><strong>Optimizing Sequential Experimental Design with Deep Reinforcement Learning</strong><br>
-Tom Blau, Edwin Bonilla, Iadine Chades, and Amir Dezfouli.<br>
-ICML, 2022<br>
-[<a href="https://arxiv.org/abs/2202.00821">pdf</a>]</p>
-<p><strong>Learning from Demonstration without Demonstrations</strong><br>
-Tom Blau, Philipe Morere, Gilad Francis<br>
-ICRA, 2021<br>
-[<a href="https://arxiv.org/abs/2106.09203">pdf</a>]</p>
-<p><strong>Bayesian Curiosity for Efficient Exploration in Reinforcement Learning</strong><br>
-Tom Blau, Lionel Ott, Fabio Ramos<br>
-ACRA, 2020<br>
-[<a href="https://arxiv.org/abs/1911.08701">pdf</a>]</p>
-<p><strong>Improving Reinforcement Learning Pre-Training with Variational Dropout</strong><br>
-Tom Blau, Lionel Ott, Fabio Ramos<br>
-IROS, 2018<br>
-[<a href="https://ieeexplore.ieee.org/abstract/document/8594341">pdf</a>]</p>
+			<p>This is a <code>TODO</code> that reminds me to eventually write a post on My recent paper and where we can go next.</p>
 
 		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/mutual-information/" rel="tag">mutual information</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/design-of-experiments/" rel="tag">design of experiments</a>
+		</li>
+	</ul>
+</div>
+		</footer>
 	</article>
 </main>
 
