@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://singulaire.github.io/top/about/</guid>
-      <description>I&amp;rsquo;m a machine learning researcher interested in using reinforcement learning to do something more valuable than just generating papers. I completed my Ph.D. at the university of Sydney in 2020, completing a thesis on reinforcement learning for robotics. One of the most striking lessons from my Ph.D. was the gap between state-of-the-art RL and actual, real-world applications that provide benefit to flesh-and-blood humans. Since then I have been working on RL solutions for real problems, with a current focus on Bayesian optimal design of experiments.</description>
+      <description>About Me I&amp;rsquo;m a machine learning researcher interested in using reinforcement learning to do something more valuable than just generating papers. I completed my Ph.D. at the university of Sydney in 2020, completing a thesis on reinforcement learning for robotics. One of the most striking lessons from my Ph.D. was the gap between state-of-the-art RL and actual, real-world applications that provide benefit to flesh-and-blood humans. Since then I have been working on RL solutions for real problems, with a current focus on Bayesian optimal design of experiments.</description>
     </item>
     
     <item>
@@ -21,11 +21,21 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://singulaire.github.io/top/publications/</guid>
-      <description>Below follows a list of my publications:
-Optimizing Sequential Experimental Design with Deep Reinforcement Learning Tom Blau, Edwin Bonilla, Iadine Chades, and Amir Dezfouli. ICML, 2022 [pdf]
-Learning from Demonstration without Demonstrations Tom Blau, Philipe Morere, Gilad Francis ICRA, 2021 [pdf]
-Bayesian Curiosity for Efficient Exploration in Reinforcement Learning Tom Blau, Lionel Ott, Fabio Ramos ACRA, 2020 [pdf]
-Improving Reinforcement Learning Pre-Training with Variational Dropout Tom Blau, Lionel Ott, Fabio Ramos IROS, 2018 [pdf]</description>
+      <description>Publications Below follows a list of my publications:
+Optimizing Sequential Experimental Design with Deep Reinforcement Learning
+Tom Blau, Edwin Bonilla, Iadine Chades, and Amir Dezfouli.
+ICML, 2022
+[pdf]
+Learning from Demonstration without Demonstrations
+Tom Blau, Philipe Morere, Gilad Francis
+ICRA, 2021
+[pdf]
+Bayesian Curiosity for Efficient Exploration in Reinforcement Learning
+Tom Blau, Lionel Ott, Fabio Ramos
+ACRA, 2020
+[pdf]
+Improving Reinforcement Learning Pre-Training with Variational Dropout
+Tom Blau, Lionel Ott, Fabio Ramos</description>
     </item>
     
   </channel>
