@@ -16,6 +16,16 @@
     </item>
     
     <item>
+      <title>Notes on Notation</title>
+      <link>https://singulaire.github.io/post/notes-on-notation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://singulaire.github.io/post/notes-on-notation/</guid>
+      <description>This post is a living document of various ideas on mathematical notation that I think are interesting.
+Tuple or Set? Products in Expectations </description>
+    </item>
+    
+    <item>
       <title>Reinforcement Learning for Design of Experiments</title>
       <link>https://singulaire.github.io/post/rl-boed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://singulaire.github.io/top/about/</guid>
-      <description>About Me I&amp;rsquo;m a machine learning researcher interested in using reinforcement learning to do something more valuable than just generating papers. I completed my Ph.D. at the university of Sydney in 2020, completing a thesis on reinforcement learning for robotics. One of the most striking lessons from my Ph.D. was the gap between state-of-the-art RL and actual, real-world applications that provide benefit to flesh-and-blood humans. Since then I have been working on RL solutions for real problems, with a current focus on Bayesian optimal design of experiments.</description>
+      <description>About Me My name is Tom Blau and I&amp;rsquo;m a machine learning researcher interested in using reinforcement learning to do something more valuable than just generating papers. I completed my Ph.D. at the university of Sydney in 2020, completing a thesis on reinforcement learning for robotics. One of the most striking lessons from my Ph.D. was the gap between state-of-the-art RL and actual, real-world applications that provide benefit to flesh-and-blood humans.</description>
     </item>
     
     <item>
@@ -45,6 +45,16 @@ Tom Blau, Lionel Ott, Fabio Ramos</description>
       
       <guid>https://singulaire.github.io/post/bounds-on-bounds/</guid>
       <description>This is a TODO that reminds me to eventually write a post on limitations of MI estimators and alternative solutions.</description>
+    </item>
+    
+    <item>
+      <title>Notes on Notation</title>
+      <link>https://singulaire.github.io/post/notes-on-notation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://singulaire.github.io/post/notes-on-notation/</guid>
+      <description>This post is a living document of various ideas on mathematical notation that I think are interesting.
+Tuple or Set? Products in Expectations </description>
     </item>
     
     <item>

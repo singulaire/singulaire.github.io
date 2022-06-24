@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>design of experiments - Tom Blau - But It Could Be Better</title>
+	<title>notation - Tom Blau - But It Could Be Better</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	
-	<link rel="alternate" type="application/rss+xml" href="/tags/design-of-experiments/index.xml" title="Tom Blau - But It Could Be Better">
+	<link rel="alternate" type="application/rss+xml" href="/tags/notation/index.xml" title="Tom Blau - But It Could Be Better">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -66,47 +66,20 @@
 			
 <main class="main list" role="main">
 	<header class="main__header">
-		<h1 class="main__title">design of experiments</h1>
+		<h1 class="main__title">notation</h1>
 	</header><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/post/bounds-on-bounds/" rel="bookmark">
-			Bounds on Bounds
+			<a href="/post/notes-on-notation/" rel="bookmark">
+			Notes on Notation
 			</a>
 		</h2>
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		This is a TODO that reminds me to eventually write a post on limitations of MI estimators and alternative solutions.
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/post/rl-boed/" rel="bookmark">
-			Reinforcement Learning for Design of Experiments
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		This is a TODO that reminds me to eventually write a post on My recent paper and where we can go next.
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/post/upper-and-lower-mutual-information-bounds/" rel="bookmark">
-			Upper and Lower Mutual Information Bounds
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Recently Foster et al (2020) introduced a couple of tractable bounds that can be used to estimate the expected information gain (EIG) of a design policy (a mapping from past designs and observations to the next design). These include the sequential Prior Contrastive Estimate (sPCE) lower bound:
-$$ \mathcal{L}_T(\pi) = \mathbb{E} \left[ \log \frac{p(h_T | \theta_0, \pi)}{\frac{1}{L+1} \sum_0^L p(h_T | \theta_l, \pi)} \right] $$
-where $h_T = (d_0, y_0,\dots,d_T,y_T)$ is the experimental history at time $T$, $\pi$ is the design policy, $L$ is the number of contrastiv samples and $\theta$ parameterises the experimental model $p(y|\theta, d)$ that maps designs to a distribution over outcomes.
+		This post is a living document of various ideas on mathematical notation that I think are interesting.
+Tuple or Set? Products in Expectations 
 	</div>
 </article>
 </main>
