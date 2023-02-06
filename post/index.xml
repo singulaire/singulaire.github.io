@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://singulaire.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Biological Optimisation as Machine Learning</title>
+      <link>https://singulaire.github.io/post/biological-optimisation-as-machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://singulaire.github.io/post/biological-optimisation-as-machine-learning/</guid>
+      <description>The biotech field has long been in the business of trying to find new molecules or mechanisms that achieve improved function compared with what is readily available in nature. Fundamentally, this can be thought of as an optimisation problem in a very large search space. For machine learning scientists, as soon as we hear &amp;ldquo;optimisation problem&amp;rdquo; we immediately think &amp;ldquo;how can we do it better than anyone else with machine learning?</description>
+    </item>
+    
+    <item>
       <title>Bounds on Bounds</title>
       <link>https://singulaire.github.io/post/bounds-on-bounds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

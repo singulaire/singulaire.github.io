@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>biology on Tom Blau - But It Could Be Better</title>
+    <link>https://singulaire.github.io/tags/biology/</link>
+    <description>Recent content in biology on Tom Blau - But It Could Be Better</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://singulaire.github.io/tags/biology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Biological Optimisation as Machine Learning</title>
+      <link>https://singulaire.github.io/post/biological-optimisation-as-machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://singulaire.github.io/post/biological-optimisation-as-machine-learning/</guid>
+      <description>The biotech field has long been in the business of trying to find new molecules or mechanisms that achieve improved function compared with what is readily available in nature. Fundamentally, this can be thought of as an optimisation problem in a very large search space. For machine learning scientists, as soon as we hear &amp;ldquo;optimisation problem&amp;rdquo; we immediately think &amp;ldquo;how can we do it better than anyone else with machine learning?</description>
+    </item>
+    
+  </channel>
+</rss>
